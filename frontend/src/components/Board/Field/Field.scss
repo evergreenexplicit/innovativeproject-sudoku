@@ -6,8 +6,8 @@
     justify-content: center;
     background: $board-color;
     padding: 0;
-    min-width: 4vw;
-    min-height: 4vw;
+    min-width: 4.5vw;
+    min-height: 4.5vw;
 }
 
 .field p{
@@ -16,14 +16,14 @@
 
 @media(max-width: 1000px){
     .field{
-        min-width: 4.5vh;
-        min-height: 4.5vh;
+        min-width: 6vh;
+        min-height: 6vh;
     }
 }
 
 @media(max-width: 800px){
     .field{
-        min-width: 4vh;
-        min-height: 4vh;
+        min-width: 4.5vh;
+        min-height: 4.5vh;
     }
 }
