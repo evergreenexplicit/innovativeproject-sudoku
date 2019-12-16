@@ -77,6 +77,7 @@ function App() {
               {/*<Route path="/login" component={Login} />*/}
               <Route path="/menu" component={Menu} />
               <Route path="/game" component={Board} />
+              <Route path="/results" component={Results} />
               <Route path="/settings" component={Settings} />
               <Route path="*">
                 <Redirect to="menu" />
