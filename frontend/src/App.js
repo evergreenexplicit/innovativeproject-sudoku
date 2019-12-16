@@ -11,6 +11,7 @@ import Menu from "./components/Menu/Menu";
 import GameView from "./components/GameView/GameView";
 import Settings from "./components/Settings/Settings";
 import ParticlesComponent from "./components/ParticlesComponent/ParticlesComponent";
+import Results from "./components/Results/Results";
 
 const theme = createMuiTheme({
   overrides: {
@@ -72,6 +73,7 @@ function App() {
               <Route path="/login" component={Login} />
               <Route path="/menu" component={Menu} />
               <Route path="/game" component={GameView} />
+              <Route path="/results" component={Results} />
               <Route path="/settings" component={Settings} />
               <Route path="*">
                 <Redirect to="register" />
