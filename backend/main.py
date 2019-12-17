@@ -1,5 +1,4 @@
 from starlette.middleware.cors import CORSMiddleware
-from starlette.staticfiles import StaticFiles
 from fastapi import FastAPI
 
 from src.auth import connect_to_db
@@ -9,7 +8,6 @@ from src.routes.auth import auth_router
 connect_to_db()
 
 app = FastAPI()
-
 
 origins = [
     "http:localhost",
@@ -37,5 +35,3 @@ async def sudoku():
     board = SudokuBoard()
     board.make_puzzle()
     return {"sudokuBoard": board.get_board_matrix()}
-
-app.mount("/*", StaticFiles(directory="../frontend/build"), name="static")
