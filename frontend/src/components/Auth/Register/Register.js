@@ -15,7 +15,7 @@ async function handleRegister(params, setStatus) {
   formData.append("re_password", params.data.rePassword);
   (async () => {
     try {
-      await ky.post("/api/register", {
+      await ky.post("https://sudokubr.me/api/register", {
         body: formData
       });
     } catch (e) {

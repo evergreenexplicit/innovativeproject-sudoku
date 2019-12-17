@@ -14,7 +14,7 @@ async function handleSubmit(params, setStatus) {
   formData.append("password", params.data.password);
   (async () => {
     try {
-      await ky.post("/api/login", {
+      await ky.post("https://sudokubr.me/api/login", {
         body: formData
       });
     } catch (e) {
