@@ -87,7 +87,7 @@ class SudokuBoard:
         def get_index():
             index = randint(0, self.SIZE ** 4 - 1) # noseq
             coords = self.resolve_index(index)
-            while coords.x % self.SIZE ** 2 - 1 == 0 or coords.y & self.SIZE ** 2 - 1 == 0:
+            while coords.x % self.SIZE ** 2 - 1 == 0 or coords.y % self.SIZE ** 2 - 1 == 0:
                 index = randint(0, self.SIZE ** 4 - 1) # noseq
                 coords = self.resolve_index(index)
             return index
