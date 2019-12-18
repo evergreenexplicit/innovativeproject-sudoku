@@ -51,6 +51,10 @@ const theme = createMuiTheme({
         "&:hover": {
           backgroundColor: "white",
           color: "black"
+        },
+        "&$disabled": {
+          borderColor: "grey",
+          color: "grey"
         }
       }
     }
@@ -66,15 +70,15 @@ function App() {
           <BrowserRouter>
             <Switch>
               <Route exact path="/">
-                <Redirect to="register" />
+                <Redirect to="menu" />
               </Route>
-              <Route path="/register" component={Register} />
-              <Route path="/login" component={Login} />
+              {/*<Route path="/register" component={Register} />*/}
+              {/*<Route path="/login" component={Login} />*/}
               <Route path="/menu" component={Menu} />
               <Route path="/game" component={GameView} />
               <Route path="/settings" component={Settings} />
               <Route path="*">
-                <Redirect to="register" />
+                <Redirect to="menu" />
               </Route>
             </Switch>
           </BrowserRouter>
