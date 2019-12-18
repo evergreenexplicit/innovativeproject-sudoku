@@ -11,20 +11,17 @@
 
 .Results h1 {
   margin-bottom: 40px;
-}
-
-.Results h1, h2 {
   color: white;
 }
 
-.Results a {
-  padding: 10px 0;
-  width: 90%;
-  text-decoration: none;
+.Results h2 {
+  color: white;
 }
 
-button {
-  width: 100%;
+.Results button {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 80%;
 }
 
 @media (max-width: 576px) {
@@ -35,7 +32,7 @@ button {
     border-radius: 0;
   }
 
-  .Results a {
+  .Results button {
     width: 90%;
   }
 }

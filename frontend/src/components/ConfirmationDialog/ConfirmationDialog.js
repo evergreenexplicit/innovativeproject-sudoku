@@ -1,4 +1,5 @@
 import React from "react";
+import "./ConfirmationDialog.scss";
 import {
   Button,
   Dialog,
