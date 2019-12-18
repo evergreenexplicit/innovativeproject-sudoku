@@ -84,10 +84,18 @@ class SudokuBoard:
 
     def make_puzzle(self):
         clues = self.SIZE ** 4
+        def get_index():
+            index = randint(0, self.SIZE ** 4 - 1) # noseq
+            coords = self.resolve_index(index)
+            while coords.x % self.SIZE ** 2 - 1 == 0 or coords.y & self.SIZE ** 2 - 1 == 0:
+                index = randint(0, self.SIZE ** 4 - 1) # noseq
+                coords = self.resolve_index(index)
+            return index
+        
         while clues >= self.difficulty.value:
-            index = randint(1, self.SIZE ** 4 - 2)  # nosec
+            index = get_index()
             while self.cells[index].value == 0:
-                index = randint(1, self.SIZE ** 4 - 2)  # nosec
+                index = get_index()
             self.cells[index].value = 0
             clues -= 1
 
