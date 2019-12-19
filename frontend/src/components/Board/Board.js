@@ -45,6 +45,14 @@ const Board = () => {
       });
   };
 
+  const downloadStartBoard = () => {
+    fetch("https://sudokubr.me/api/sudoku")
+      .then(res => res.json())
+      .then(board => {
+        setBoardArray(board.sudokuBoard);
+      });
+  };
+
   const createRows = board => {
     const newRows = [];
     let currentRow;
@@ -64,7 +72,7 @@ const Board = () => {
     if (boardArray) {
       setRows(createRows(boardArray));
     } else {
-      downloadNewBoard();
+      downloadStartBoard();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [boardArray]);
