@@ -12,7 +12,7 @@ const Results = () => {
         <h1>GAME OVER</h1>
         <Button
           onClick={() => history.push("/menu")}
-          className="mt-5"
+          className="mt-1"
           size="large"
           variant="outlined"
         >

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router";
 import _ from "lodash";
 import LongPress from "react-long";
 import { isMobile } from "react-device-detect";
@@ -15,6 +16,7 @@ import GoBackButton from "../GoBackButton/GoBackButton";
 import useTimer from "../../hooks/useTimer";
 
 const Board = () => {
+  const history = useHistory();
   const [boardArray, setBoardArray] = useState(null);
   const [rows, setRows] = useState();
   const [suggestions, setSuggestions] = useState(null);
@@ -29,7 +31,7 @@ const Board = () => {
   }
 
   if (gameEnd) {
-    console.log("GAME END");
+    history.push("/results");
   }
 
   const downloadNewBoard = () => {
