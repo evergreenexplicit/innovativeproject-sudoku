@@ -4,7 +4,6 @@ import LongPress from "react-long";
 import { isMobile } from "react-device-detect";
 import HTML5Backend from "react-dnd-html5-backend";
 import { DndProvider } from "react-dnd";
-import { Line } from "rc-progress";
 import Field from "./Field/Field";
 import styles from "./Board.scss";
 import CircularMenu from "../CircularMenu/CircularMenu";
@@ -179,13 +178,6 @@ const Board = () => {
         <p style={{ color: timerColor }}>
           {minutes}:{seconds}
         </p>
-        <Line
-          className="progressBar"
-          percent={progress}
-          strokeWidth="2"
-          trailWidth="2"
-          strokeColor={timerColor}
-        />
       </div>
       <DndProvider backend={HTML5Backend}>
         <div className="gamePanel">

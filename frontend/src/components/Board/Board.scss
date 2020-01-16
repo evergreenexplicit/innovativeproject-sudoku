@@ -51,11 +51,15 @@
     padding: 0 0 20px 0;
 }
 
+.Timer{
+    border-radius: 10px;
+    background-color: rgba($background-color, $alpha: 0.75);
+}
+
 .Timer p{
     margin: 0;
     color: $white;
     font-size: 40px;
-    float: right;
     font-family: 'Exo 2', sans-serif;
 }
 
